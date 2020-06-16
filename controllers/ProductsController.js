@@ -2,7 +2,6 @@ const viewPath = ('products');
 const Product = require('../models/product');
 
 exports.show = async (req, res) => {
-
     Product.findById(req.params.id)
     .then(product => {
       res.render(`${viewPath}/show`, {
@@ -24,7 +23,7 @@ exports.new = (req, res) => {
 exports.create = async (req, res) => {
   Product.create(req.body.product)
   .then(() => {
-    res.redirect('/products/show');
+    res.redirect(`${viewPath}/show`);
   })
   .catch(err => {
     console.error(`ERROR: ${err}`);
