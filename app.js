@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 
 const path = require('path');
+const flash = require('connect-flash');
 
 // Set our views directory
 app.set('views', path.join(__dirname, 'views'));
