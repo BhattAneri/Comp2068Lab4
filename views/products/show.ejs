@@ -3,20 +3,20 @@
 <div class="container my-5">
   <header>
     <h1>
-      <%= product.name %>
+      <%= ProductSchema.name %>
       <a href="/products/<%= product.id %>/edit">
         <i class="fa fa-edit"></i>
       </a>
     </h1>
     <br>
     <small>
-      <%= (product.updatedAt.toLocaleString("en-CA")) %>
+      <%= (ProductSchema.updatedAt.toLocaleString("en-CA")) %>
     </small>
   </header>
   <hr>
   <div class="content">
-    <%- product.description %>
-    <%- product.price %>
+    <%-ProductSchema.description %>
+    <%- ProductSchema.price %>
   </div>
 </div>
 
