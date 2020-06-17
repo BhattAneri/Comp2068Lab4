@@ -24,7 +24,7 @@ exports.create = async (req, res) => {
 
   Product.create(req.body.product)
   .then(() => {
-    res.redirect(`${viewPath}/show`);
+    res.redirect(`${viewPath}/${product.id}`);
   })
   .catch(err => {
     console.error(`ERROR: ${err}`);
